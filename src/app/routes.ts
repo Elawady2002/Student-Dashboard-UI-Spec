@@ -23,6 +23,7 @@ import { BooksPage } from "./pages/BooksPage";
 // Teacher pages (/teacher)
 import { TeacherHomePage } from "./pages/teacher/TeacherHomePage";
 import { CourseManagementPage } from "./pages/teacher/CourseManagementPage";
+import { TeacherCourseContentPage } from "./pages/teacher/TeacherCourseContentPage";
 import { BookManagementPage } from "./pages/teacher/BookManagementPage";
 import { QACommentsPage } from "./pages/teacher/QACommentsPage";
 import { FinancialHubPage } from "./pages/teacher/FinancialHubPage";
@@ -71,6 +72,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, Component: TeacherHomePage },
       { path: "courses", Component: CourseManagementPage },
+      { path: "courses/:id", Component: TeacherCourseContentPage },
       { path: "books", Component: BookManagementPage },
       { path: "qa", Component: QACommentsPage },
       { path: "financial", Component: FinancialHubPage },
